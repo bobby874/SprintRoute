@@ -1,19 +1,25 @@
 pipeline {
     agent any
+
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/your-username/your-repo.git'
+                git url: 'https://github.com/bscott-007/SprintRoute.git', branch: 'main'
+            }
+        }
+        stage('Install Dependencies') {
+            steps {
+                sh 'npm install'
             }
         }
         stage('Build') {
             steps {
-                sh 'make'  // Replace with your build command
+                sh 'npm run build'
             }
         }
         stage('Test') {
             steps {
-                sh 'make test'  // Replace with your test command
+                sh 'npm test'
             }
         }
     }
