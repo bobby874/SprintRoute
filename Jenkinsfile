@@ -1,28 +1,19 @@
 pipeline {
     agent any
-
     stages {
         stage('Checkout') {
             steps {
-                script {
-                    // Scripted pipeline block with Groovy sandbox enabled
-                    git url: 'https://github.com/bscott-007/SprintRoute.git', branch: 'main'
-                }
-            }
-        }
-        stage('Install Dependencies') {
-            steps {
-                sh 'npm install'
+                git 'https://github.com/your-username/your-repo.git'
             }
         }
         stage('Build') {
             steps {
-                sh 'npm run build'
+                sh 'make'  // Replace with your build command
             }
         }
         stage('Test') {
             steps {
-                sh 'npm test'
+                sh 'make test'  // Replace with your test command
             }
         }
     }
