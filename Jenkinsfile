@@ -4,7 +4,10 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git url: 'https://github.com/bscott-007/SprintRoute.git', branch: 'main'
+                script {
+                    // Scripted pipeline block with Groovy sandbox enabled
+                    git url: 'https://github.com/bscott-007/SprintRoute.git', branch: 'main'
+                }
             }
         }
         stage('Install Dependencies') {
