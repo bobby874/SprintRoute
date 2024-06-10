@@ -4,17 +4,20 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
+                // Checkout the repository from GitHub
                 git url: 'https://github.com/bscott-007/SprintRoute.git', branch: 'main'
             }
         }
         stage('Build') {
             steps {
-                sh 'mvn clean install'
+                // Replace with your build command
+                sh 'make'
             }
         }
         stage('Test') {
             steps {
-                sh 'mvn test'
+                // Replace with your test command
+                sh 'make test'
             }
         }
     }
