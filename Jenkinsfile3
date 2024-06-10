@@ -1,0 +1,23 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Checkout') {
+            steps {
+                script {
+                    echo 'Checking out code...'
+                    git url: 'https://github.com/bscott-007/SprintRoute.git', branch: 'main'
+                }
+            }
+        }
+        stage('Build Docker Image') {
+            steps {
+                script {
+                    echo 'Building Docker image...'
+                    def app = docker.build("BobbyDocker")
+                    echo 'Docker image built successfully'
+                }
+            }
+        }
+    }
+}
