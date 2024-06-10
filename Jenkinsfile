@@ -21,14 +21,14 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    docker.build('BobbyDock')
+                    docker.build('BobbyDocker')
                 }
             }
         }
         stage('Deploy') {
             steps {
                 script {
-                    docker.image('BobbyDock').inside {
+                    docker.image('BobbyDocker').inside {
                         sh 'java -jar target/your-app.jar'
                     }
                 }
