@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git url: 'https://github.com/bscott-007/SprintRoute.git', branch: 'main'
+                git url: 'https://github.com/your-username/your-repo.git', branch: 'main'
             }
         }
         stage('Build') {
@@ -33,6 +33,18 @@ pipeline {
                     }
                 }
             }
+        }
+    }
+    post {
+        success {
+            mail to: 'rs4391397@gmail.com',
+                 subject: "SUCCESS: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
+                 body: "Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' completed successfully."
+        }
+        failure {
+            mail to: 'rs4391397@gmail.com',
+                 subject: "FAILURE: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
+                 body: "Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' failed. Check Jenkins for details."
         }
     }
 }
