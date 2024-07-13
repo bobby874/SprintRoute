@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { View, Image, StyleSheet, SafeAreaView, TouchableOpacity, Text } from 'react-native';
 import { launchImageLibrary, launchCamera } from 'react-native-image-picker';
 import icon from '../../assets/Placeholder.png'

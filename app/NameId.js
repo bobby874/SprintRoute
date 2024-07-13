@@ -1,4 +1,3 @@
-import React from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, SafeAreaView } from 'react-native';
 import addProfilePicture from './Profile_Picture'
 
