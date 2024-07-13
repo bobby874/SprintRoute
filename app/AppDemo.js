@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { View, Text, Image, StyleSheet } from 'react-native';
+import { useState, useEffect } from 'react';
+import { View,Image, StyleSheet } from 'react-native';
 import logo from '../assets/Sprint.go_Group 31.jpg'
 import Options from './Options'
 

@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { View, Button, Image, StyleSheet, SafeAreaView, TouchableOpacity, Text } from 'react-native';
+import { useState } from 'react';
+import { View, Image, StyleSheet, SafeAreaView, TouchableOpacity, Text } from 'react-native';
 import { launchImageLibrary, launchCamera } from 'react-native-image-picker';
 import icon from '../../assets/Placeholder.png'
 import SccessMsg from './Success'

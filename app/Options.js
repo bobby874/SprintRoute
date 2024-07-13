@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, Button, TouchableOpacity, ImageBackground } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, ImageBackground } from 'react-native';
 import LoginOpts from './Login Opts'
 import SignUp from './SignUp Opts'
 
