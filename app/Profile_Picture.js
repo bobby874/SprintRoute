@@ -26,12 +26,6 @@ const ImageUpload = () => {
         setProfileImage(response.assets[0].uri);
       }
     });
-
-    const navigation = useNavigation();
-  
-    const handleSuccessMsg = () => {
-      navigation.navigate(SuccessMessage); 
-    };
   };
 
   return (
