@@ -1,3 +1,5 @@
+import React from 'react'
+import { useNavigation } from '@react-navigation/native';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, SafeAreaView } from 'react-native';
 import addProfilePicture from './Profile_Picture'
 

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React,{ useState } from 'react';
 import { View, Text, TextInput, SafeAreaView, Image, StyleSheet, TouchableOpacity, ScrollView } from 'react-native';
 import * as ImagePicker from 'react-native-image-picker';
 
@@ -109,7 +109,7 @@ const ProfileSettings = () => {
         onChangeText={setNewPassword}
         secureTextEntry
       />
-      <TouchableOpacity style={[styles.button, styles.continue]}>
+      <TouchableOpacity style={[styles.button, styles.continue]} onPress={handleSave}>
                         <Text style={styles.buttonText}>Save</Text>
                     </TouchableOpacity>
     </ScrollView>

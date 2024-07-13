@@ -1,3 +1,4 @@
+import React from 'react'
 import { SafeAreaView, View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 
 const HelpScreen = () => {
