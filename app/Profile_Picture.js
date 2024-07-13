@@ -1,20 +1,17 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { View, Image, StyleSheet, SafeAreaView, TouchableOpacity, Text } from 'react-native';
-import { launchImageLibrary, launchCamera } from 'react-native-image-picker';
+import { launchCamera } from 'react-native-image-picker';
+import { useNavigation } from '@react-navigation/native';
 import icon from '../../assets/Placeholder.png'
-import SccessMsg from './Success'
 import SuccessMessage from './Success';
 
 const ImageUpload = ({ navigation }) => {
   const [profileImage, setProfileImage] = useState(null);
-
-  const selectImage = () => {
-    launchImageLibrary({}, (response) => {
-      if (response.assets && response.assets.length > 0) {
-        setProfileImage(response.assets[0].uri);
-      }
-    });
-  };
+  const navigation = useNavigation();
+    
+      const handleSuccessMsg = () => {
+        navigation.navigate(SuccessMessage); 
+      };
 
   const takePhoto = () => {
     launchCamera({}, (response) => {
@@ -23,11 +20,7 @@ const ImageUpload = ({ navigation }) => {
       }
     });
 
-    const navigation = useNavigation();
-  
-    const handleSuccessMsg = () => {
-      navigation.navigate(SuccessMessage); 
-    };
+    
   };
 
   return (
@@ -49,9 +42,9 @@ const ImageUpload = ({ navigation }) => {
         </TouchableOpacity>
       </View>
       <TouchableOpacity style={[styles.button, styles.continue]}>
-        <Text onPress={selectImage} style={styles.buttonText}>Add Image</Text>
+        <Text onPress={takePhoto} style={styles.buttonText}>Add Image</Text>
       </TouchableOpacity>
-      <Text onPress={SccessMsg} style={styles.altText} >Continue</Text>
+      <Text onPress={handleSuccessMsg} style={styles.altText} >Continue</Text>
     </View>
     </SafeAreaView>
   );

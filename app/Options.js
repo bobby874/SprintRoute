@@ -1,3 +1,5 @@
+import React from 'react'
+import { useNavigation } from '@react-navigation/native';
 import { StyleSheet, Text, View, TouchableOpacity, ImageBackground } from 'react-native';
 import LoginOpts from './Login Opts'
 import SignUp from './SignUp Opts'
