@@ -28,7 +28,7 @@ const ImageUpload = ({ navigation }) => {
     <SafeAreaView style={styles.safeArea}>
     <View style={styles.container}>
       <View style={styles.nav}>
-                        <TouchableOpacity >
+                        <TouchableOpacity onPress={() => navigation.goBack()}>
                             <Text style={styles.navText} >←</Text> 
                         </TouchableOpacity>
                         <Text style={styles.header}>Add Picture</Text>

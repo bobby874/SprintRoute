@@ -7,11 +7,16 @@ import {
   StyleSheet
 } from "react-native";
 import { useNavigation } from '@react-navigation/native';
+import SuccessMsg from './Success'
 
 const PhoneVerification = () => {
   const [otp, setOtp] = useState(["", "", "", ""]);
   const [timer, setTimer] = useState(0);
   const [newOtpRequestText, setNewOtpRequestText] = useState("Request new OTP");
+  const navigation = useNavigation();
+  const handleNextScreen = () => {
+      navigation.navigate(SuccessMsg); 
+  };
 
   const handleChange = (text, index) => {
     const newOtp = [...otp];
@@ -73,7 +78,7 @@ const PhoneVerification = () => {
           />
         ))}
       </View>
-      <TouchableOpacity style={[styles.button, styles.verify]}>
+      <TouchableOpacity style={[styles.button, styles.verify]} onPress={handleNextScreen}>
         <Text style={styles.buttonText}>Verify</Text>
       </TouchableOpacity>
       <Text onPress={handleRequestNewOtp} style={styles.request}>
