@@ -1,9 +1,29 @@
 import React from 'react'
 import { useNavigation } from '@react-navigation/native';
 import { SafeAreaView, View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+import Profile from './Profile_Settings'
+import Languages from './Languages'
+import Support from './SupportScreen'
+import Wallet from './Wallet'
 
 const SettingsScreen = () => {
   const navigation = useNavigation();
+    const handleProfilePress = () => {
+      navigation.navigate(Profile); 
+    };
+
+    const handleLanguagesPress = () => {
+      navigation.navigate(Languages); 
+    };
+
+    const handleSupportPress = () => {
+      navigation.navigate(Support); 
+    };
+
+    const handleWalletPress = () => {
+      navigation.navigate(Wallet); 
+    };
   return (
     <SafeAreaView style = {styles.safeArea}>
       <View style={styles.container}>
@@ -13,20 +33,20 @@ const SettingsScreen = () => {
         </TouchableOpacity>
         <Text style={styles.navTitle}>Settings</Text>
         </View>
-      <TouchableOpacity style={styles.option}>
+      <TouchableOpacity style={styles.option} onPress={handleProfilePress}>
         <Text style={styles.optionText}>Profile</Text>
         <Text style={styles.chevron}></Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.option}>
-        <Text style={styles.optionText}>Language</Text>
+      <TouchableOpacity style={styles.option} onPress={handleWalletPress}>
+        <Text style={styles.optionText}>Wallet</Text>
         <Text style={styles.chevron}></Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.option}>
-        <Text style={styles.optionText}>Date and distances</Text>
+      <TouchableOpacity style={styles.option} onPress={handleLanguagesPress}>
+        <Text style={styles.optionText}>Languages</Text>
         <Text style={styles.chevron}></Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.option}>
-        <Text style={styles.optionText}>Navigator</Text>
+      <TouchableOpacity style={styles.option} onPress={handleSupportPress}>
+        <Text style={styles.optionText}>Help and FAQ</Text>
         <Text style={styles.chevron}></Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.option}>

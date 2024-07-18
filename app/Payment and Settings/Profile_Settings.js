@@ -1,8 +1,10 @@
 import React,{ useState } from 'react';
 import { View, Text, TextInput, SafeAreaView, Image, StyleSheet, TouchableOpacity, ScrollView } from 'react-native';
 import * as ImagePicker from 'react-native-image-picker';
+import { useNavigation } from '@react-navigation/native';
 
 const ProfileSettings = () => {
+  const navigation = useNavigation();
   const [profilePic, setProfilePic] = useState(null);
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
