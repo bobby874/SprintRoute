@@ -8,7 +8,7 @@ const CustomDrawer = (props) => {
     <DrawerContentScrollView {...props} contentContainerStyle={styles.drawerContainer}>
       <View style={styles.profileContainer}>
         <Image
-          source={{ uri: 'https://example.com/profile-picture.jpg' }} // Replace with your profile picture URL
+          image={require('../../assets/Placeholder.png')} // Replace with your profile picture URL
           style={styles.profilePicture}
         />
         <Text style={styles.username}>username</Text>
