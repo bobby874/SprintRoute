@@ -5,7 +5,7 @@ import Tips from './TipsScreen'
 
 const TipScreen = () => {
     const navigation = useNavigation();
-    const handlePhoneSignupPress = () => {
+    const handleTipScreenPress = () => {
       navigation.navigate(Tips); 
     };
   
@@ -57,7 +57,7 @@ const TipScreen = () => {
           <Text style={styles.otherAmountText}>Choose other amount</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.doneButton}>
-          <Text style={styles.doneButtonText} onPress={handleTipsScreenPress}>Done</Text>
+          <Text style={styles.doneButtonText} onPress={handleTipScreenPress}>Done</Text>
         </TouchableOpacity>
       </View>
     </View>
