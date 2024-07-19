@@ -1,7 +1,13 @@
 import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, Image, SafeAreaView } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+import Home from '../HomeScreen/SearchDestination';
 
-const TipScreen = () => {
+  const TipsScreen = () => {
+  const navigation = useNavigation();
+  const handleHomeScreen = () => {
+    navigation.navigate(Home); 
+  };
   
   const [selectedAmount, setSelectedAmount] = useState(null);
 
@@ -18,12 +24,12 @@ const TipScreen = () => {
         <TouchableOpacity onPress={() => navigation.goBack()}>
         <Text style={styles.navText} >←</Text> 
         </TouchableOpacity>
-        <Text style={styles.header}>Rate Driver</Text>
+        <Text style={styles.header}>Driver Tips</Text>
       </View>
       </SafeAreaView>
       <View style={styles.card}>
         <Image 
-          source={{ uri: 'https://placekitten.com/200/200' }} 
+          source={require('../../Placeholder.png')} 
           style={styles.profileImage} 
         />
         <Text style={styles.name}>Gregory Smith</Text>
@@ -51,10 +57,10 @@ const TipScreen = () => {
           <Text style={styles.otherAmountText}>Choose other amount</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.doneButton}>
-          <Text style={styles.doneButtonText}>Done</Text>
+          <Text style={styles.doneButtonText} onPress={handleHomeScreen}>Done</Text>
         </TouchableOpacity>
-        <TouchableOpacity>
-          <Text style={styles.maybeNextTimeText}>Maybe next time</Text>
+        <TouchableOpacity style={styles.otherAmountButton} onPress={handleHomeScreen}>
+          <Text style={styles.otherAmountText}>Maybe Next time</Text>
         </TouchableOpacity>
       </View>
     </View>
@@ -167,4 +173,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default TipScreen;
+export default TipsScreen;
