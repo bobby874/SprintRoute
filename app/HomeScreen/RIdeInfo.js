@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { View, Text, Image, StyleSheet, TouchableOpacity, Animated } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import Home from './SearchDestination'
+import ChatScreen from './ChatScreen';
 
 const RideDetails = () => {
   const slideAnim = useRef(new Animated.Value(500)).current;
@@ -20,6 +21,11 @@ const RideDetails = () => {
       duration: 500,
       useNativeDriver: true,
     }).start();
+  };
+
+  const navigation = useNavigation();
+  const handleChatScreen = () => {
+    navigation.navigate(ChatScreen); 
   };
 
   return (
@@ -46,7 +52,7 @@ const RideDetails = () => {
             <TouchableOpacity style={styles.iconContainer}>
               <Icon name="call" size={24} color="#000" />
             </TouchableOpacity>
-            <TouchableOpacity style={styles.iconContainer}>
+            <TouchableOpacity style={styles.iconContainer} onPress={handleChatScreen}>
               <Icon name="chatbubble" size={24} color="#000" />
             </TouchableOpacity>
           </View>
