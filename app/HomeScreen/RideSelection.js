@@ -86,6 +86,7 @@ const RideSelectionScreen = ({ navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    justifyContent: 'flex-end',
   },
   searchContainer: {
     flex: 1,

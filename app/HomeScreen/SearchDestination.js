@@ -17,6 +17,7 @@ import Safety from '../Payment and Settings/Safety'
 import History from '../Payment and Settings/History'
 import RideSelectionScreen from './RideSelection';
 import SearchDriver from './SearchingDriver'
+import RideInfo from './RIdeInfo'
 
 
 const navigation = useNavigation();
@@ -122,6 +123,7 @@ const Home = () => {
         <Stack.Screen name="Drawer" component={DrawerNavigator} options={{ headerShown: false }} />
         <Stack.Screen name="Select Ride" component={RideSelectionScreen} options={{ headerShown: false }} />
         <Stack.Screen name="Search Driver" component={SearchDriver} options={{ headerShown: false }} />
+        <Stack.Screen name="Ride Info" component={RideInfo} options={{ headerShown: false }} />
       </Stack.Navigator>
     </NavigationContainer>
   );
