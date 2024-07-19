@@ -39,6 +39,8 @@ const RatingScreen = () => {
     navigation.navigate(TipsScreen)
   };
 
+  
+
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <SafeAreaView>
