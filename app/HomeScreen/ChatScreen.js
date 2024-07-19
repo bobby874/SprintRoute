@@ -23,7 +23,13 @@ const ChatScreen = () => {
 
   const navigation = useNavigation();
 
-  
+  const renderItem = ({ item }) => (
+    <View style={[styles.messageContainer, item.type === 'sent' ? styles.sent : styles.received]}>
+      <Text style={[styles.messageText, item.type === 'sent' ? styles.sentText : styles.receivedText]}>
+        {item.text}
+      </Text>
+    </View>
+  );
 
   return (
     <SafeAreaView style={styles.container}>
