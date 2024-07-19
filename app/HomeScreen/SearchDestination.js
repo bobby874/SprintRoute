@@ -5,6 +5,7 @@ import { Icon, Button } from 'react-native-elements';
 import { NavigationContainer } from '@react-navigation/native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { useNavigation } from '@react-navigation/native';
 import CustomDrawer from './CustomDrawer';
 import Profile from '../Payment and Settings/Profile_Settings'
 import Languages from '../Payment and Settings/Languages'
@@ -12,8 +13,18 @@ import Support from '../Payment and Settings/SupportScreen'
 import Wallet from '../Payment and Settings/Wallet'
 import InviteFriends from '../InviteScreen/InviteScreen'
 import Logout from '../Login Opts'
+import Safety from '../Payment and Settings/Safety'
+import History from '../Payment and Settings/History'
+import RideSelectionScreen from './RideSelection';
+import SearchDriver from './SearchingDriver'
 
-const MapScreen = ({ navigation }) => {
+
+const navigation = useNavigation();
+  const handelNextScreenPress = () => {
+      navigation.navigate(RideSelectionScreen)
+  }
+
+function MapScreen({ navigation }) {
   const [region, setRegion] = useState({
     latitude: 6.6746, // KNUST Latitude
     longitude: -1.5719, // KNUST Longitude
@@ -30,11 +41,7 @@ const MapScreen = ({ navigation }) => {
     { id: 4, latitude: 6.6736, longitude: -1.5715 },
   ];
 
-  const findDriver = () => {
-    Alert.alert('Find Driver', `Finding a driver to ${destination}`);
-  };
 
- 
   return (
     <View style={styles.container}>
       <MapView
@@ -47,8 +54,7 @@ const MapScreen = ({ navigation }) => {
           <Marker
             key={car.id}
             coordinate={{ latitude: car.latitude, longitude: car.longitude }}
-            image={require('./assets/car.jpg')}
-          />
+            image={require('./assets/car.jpg')} />
         ))}
       </MapView>
       <View style={styles.searchContainer}>
@@ -56,14 +62,13 @@ const MapScreen = ({ navigation }) => {
           <Icon
             name="menu"
             size={30}
-            onPress={() => navigation.openDrawer()}
-          />
+            onPress={() => navigation.openDrawer()} />
           <Text style={styles.heading}>Where do you want to go?</Text>
         </View>
         <View style={styles.destinationBox}>
           <View style={styles.destinationInput}>
             <Icon name="map-marker" type="font-awesome" size={24} color="#0000FF" />
-            <Text style={styles.destinationText}>Neemuch RD. Gopalbari, Bari Sad</Text>
+            <Text style={styles.destinationText}>Paaajoe, KNUST</Text>
           </View>
         </View>
         <View style={styles.searchBox}>
@@ -72,20 +77,18 @@ const MapScreen = ({ navigation }) => {
             placeholderTextColor="#aaa"
             autoCapitalize="none"
             style={{ flex: 1, padding: 0 }}
-            onChangeText={(text) => setDestination(text)}
-          />
+            onChangeText={(text) => setDestination(text)} />
           <Icon name="search" size={20} />
         </View>
         <Button
           title="Find Driver"
           buttonStyle={styles.findDriverButton}
           icon={<Icon name="car" type="font-awesome" size={24} color="white" />}
-          onPress={findDriver}
-        />
+          onPress={handelNextScreenPress} />
       </View>
     </View>
   );
-};
+}
 
 
 
@@ -93,6 +96,7 @@ const Drawer = createDrawerNavigator();
 const Stack = createNativeStackNavigator();
 
 const DrawerNavigator = () => {
+ 
   return (
     <Drawer.Navigator
       initialRouteName="MapScreen"
@@ -101,9 +105,9 @@ const DrawerNavigator = () => {
       <Drawer.Screen name="Home" component={MapScreen} options={{ title: 'Home' }} />
       <Drawer.Screen name="Profile" component={Profile} options={{ title: 'Profile' }} />
       <Drawer.Screen name="Wallet" component={Wallet} options={{ title: 'Wallet' }} />
-      <Drawer.Screen name="History"  component={MapScreen} options={{ title: 'History' }} />
+      <Drawer.Screen name="History"  component={History} options={{ title: 'History' }} />
       <Drawer.Screen name="Languages"  component={Languages} options={{ title: 'Languages' }} />
-      <Drawer.Screen name="Safety"  component={MapScreen} options={{ title: 'Safety' }} />
+      <Drawer.Screen name="Safety"  component={Safety} options={{ title: 'Safety' }} />
       <Drawer.Screen name="Support and FAQ"  component={Support} options={{ title: 'Support and FAQ' }} />
       <Drawer.Screen name="Invite Friends"  component={InviteFriends} options={{ title: 'Invite Friends' }} />
       <Drawer.Screen name="Logout"  component={Logout} options={{ title: 'Logout' }} />
@@ -116,6 +120,8 @@ const Home = () => {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen name="Drawer" component={DrawerNavigator} options={{ headerShown: false }} />
+        <Stack.Screen name="Select Ride" component={RideSelectionScreen} options={{ headerShown: false }} />
+        <Stack.Screen name="Search Driver" component={SearchDriver} options={{ headerShown: false }} />
       </Stack.Navigator>
     </NavigationContainer>
   );
@@ -182,7 +188,7 @@ const styles = StyleSheet.create({
   findDriverButton: {
     marginTop: 20,
     backgroundColor: 'orange', // Changed to orange
-    borderRadius: 5,
+    borderRadius: 20,
     paddingVertical: 10,
   },
   anotherScreenText: {
