@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyleSheet, View, Dimensions, TextInput, Text, Alert } from 'react-native';
+import { StyleSheet, View, Dimensions, TextInput, Text} from 'react-native';
 import MapView, { Marker } from 'react-native-maps';
 import { Icon, Button } from 'react-native-elements';
 import { NavigationContainer } from '@react-navigation/native';
@@ -33,7 +33,7 @@ function MapScreen({ navigation }) {
     longitudeDelta: 0.0121,
   });
 
-  const [destination, setDestination] = useState('');
+  const [setDestination] = useState('');
 
   const cars = [
     { id: 1, latitude: 6.6766, longitude: -1.5729 },
