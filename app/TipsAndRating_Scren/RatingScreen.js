@@ -4,18 +4,15 @@ import { useNavigation } from '@react-navigation/native';
 import Tips from './TipsScreen'
 
 const TipScreen = () => {
-    const navigation = useNavigation();
-    const handleTipScreenPress = () => {
-      navigation.navigate(Tips); 
-    };
+  const navigation = useNavigation();
+  const handleTipsScreenPress = () => {
+    navigation.navigate(Tips); 
+  };
   
   const [selectedAmount, setSelectedAmount] = useState(null);
 
   const amounts = [1, 2, 5];
 
-  const handleTipsScreenPress = (amount) => {
-    setSelectedAmount(amount);
-  };
 
   return (
     <View style={styles.container}>
@@ -57,7 +54,7 @@ const TipScreen = () => {
           <Text style={styles.otherAmountText}>Choose other amount</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.doneButton}>
-          <Text style={styles.doneButtonText} onPress={handleTipScreenPress}>Done</Text>
+          <Text style={styles.doneButtonText} onPress={handleTipsScreenPress}>Done</Text>
         </TouchableOpacity>
       </View>
     </View>
