@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Text, TouchableOpacity, Image, StyleSheet, TextInput, SafeAreaView } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import { useNavigation } from '@react-navigation/native';
 
 const Stack = createStackNavigator();
 
@@ -12,6 +13,7 @@ const InviteFriendScreen = ({ navigation }) => {
     // Handle invite action
     console.log('Invite code:', inviteCode);
   };
+  const navigation = useNavigation();
 
   return (
     <View style={styles.container}>

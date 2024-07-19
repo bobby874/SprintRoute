@@ -1,9 +1,14 @@
 import React from 'react'
 import { View, Text, TouchableOpacity, StyleSheet, Image } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+import HomeSearchScreen from './HomeScreen/HostScreen'
 
 
 const EnableLocation = () => {
-  
+  const navigation = useNavigation();
+    const handleSearchScreen = () => {
+            navigation.navigate(HomeSearchScreen); 
+      };
 
   return (
     <View style={styles.container}>
@@ -12,7 +17,7 @@ const EnableLocation = () => {
       <Text style={styles.subtitle}>
         Your account has been Successfully verified, please continue to homepage to start placing orders
       </Text>
-      <TouchableOpacity style={styles.button}>
+      <TouchableOpacity style={styles.button} onPress={handleSearchScreen}>
         <Text style={styles.buttonText}>Continue</Text>
       </TouchableOpacity>
     </View>

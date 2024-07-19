@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faAngleLeft } from '@fortawesome/free-solid-svg-icons';
 import Verify from './OTP Verification Prompt'
 
-const Demo = () => {
+const Login = () => {
     const navigation = useNavigation();
   
     const handleVerifyPress = () => {
@@ -142,4 +142,4 @@ const styles = StyleSheet.create({
   },
 })
 
-export default Demo;
+export default Login;
