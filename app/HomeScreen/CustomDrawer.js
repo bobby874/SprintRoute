@@ -1,4 +1,3 @@
-// CustomDrawer.js
 import React from 'react';
 import { View, Text, StyleSheet, Image } from 'react-native';
 import { DrawerContentScrollView, DrawerItemList } from '@react-navigation/drawer';
@@ -8,7 +7,7 @@ const CustomDrawer = (props) => {
     <DrawerContentScrollView {...props} contentContainerStyle={styles.drawerContainer}>
       <View style={styles.profileContainer}>
         <Image
-          image={require('../../assets/Placeholder.png')} // Replace with your profile picture URL
+          image={require('../../assets/Placeholder.png')}
           style={styles.profilePicture}
         />
         <Text style={styles.username}>username</Text>
