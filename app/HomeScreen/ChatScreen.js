@@ -35,7 +35,7 @@ const ChatScreen = () => {
     <SafeAreaView style={styles.container}>
       <View style={styles.header}>
         <View style={styles.headerLeft}>
-          <Image source={require('./assets/Placeholder.png')} style={styles.profileImage} />
+          <Image source={require('../../assets/Placeholder.png')} style={styles.profileImage} />
           <View style={styles.headerTextContainer}>
             <Text style={styles.profileName}>Driver ID</Text>
             <Text style={styles.status}>Active now</Text>
