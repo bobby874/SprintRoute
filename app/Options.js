@@ -17,7 +17,7 @@ export default function App() {
   
   return (
     <View style={styles.container}>
-      <ImageBackground source={require('./assets/7605147.jpg')} style={styles.backgroundImage}>
+      <ImageBackground source={require('../assets/7605147.jpg')} style={styles.backgroundImage}>
         <View style={styles.innerContainer}>
           <Text style={styles.header}>Sprint.route</Text>
           <View style={styles.buttonContainer}>
