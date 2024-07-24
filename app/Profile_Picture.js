@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { View, Image, StyleSheet, SafeAreaView, TouchableOpacity, Text } from 'react-native';
 import { launchImageLibrary, launchCamera } from 'react-native-image-picker';
 import { useNavigation } from '@react-navigation/native';
-import icon from '../../assets/Placeholder.png'
 import SuccessMessage from './Success';
 
 const ImageUpload = () => {
@@ -41,7 +40,7 @@ const ImageUpload = () => {
       <View style={styles.imageContainer}>
         <TouchableOpacity onPress={selectImage}>
           <Image
-            source={profileImage ? { uri: profileImage } : require(icon)}
+            source={profileImage ? { uri: profileImage } : require('../assets/Placeholder.png')}
             style={styles.profileImage}
           />
         </TouchableOpacity>
