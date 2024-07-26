@@ -19,7 +19,7 @@ const AppDemo = () => {
   return (
     <View style={styles.container}>
       <Image
-        source={require('../assets/logo.jpg')} 
+        source={require('../assets/logo.png')} 
         style={styles.logoImage}
       />
     </View>
