@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 import { View, Image, StyleSheet, SafeAreaView, TouchableOpacity, Text } from 'react-native';
 import { launchImageLibrary, launchCamera } from 'react-native-image-picker';
 import { useNavigation } from '@react-navigation/native';
-import SuccessMessage from './Success';
+import OTPVerification from './OTP Verification Prompt';
 
 const ImageUpload = () => {
   const [profileImage, setProfileImage] = useState(null);
   const navigation = useNavigation();
   const handleNextScreen = () => {
-    navigation.navigate(SuccessMessage); 
+    navigation.navigate(OTPVerification); 
   };
 
   const selectImage = () => {
