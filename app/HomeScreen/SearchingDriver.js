@@ -24,7 +24,7 @@ const SearchingDriverScreen = ({ navigation }) => {
     <View style={styles.container}>
       <Animated.View style={[styles.searchingContainer, { transform: [{ translateY: slideAnim }] }]}>
         <Image
-          source={require('../../assets/SearchRider.png')} // Use your searching image
+          source={require('../../assets/SearchRider.png')} 
           style={styles.searchingImage}
         />
         <Text style={styles.searchingText}>Please hold! we are searching for nearby Sprint driver for you</Text>
