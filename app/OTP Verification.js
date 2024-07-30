@@ -1,13 +1,6 @@
 import React, { useState, useEffect } from "react";
-import {
-  View,
-  Text,
-  TextInput,
-  TouchableOpacity,
-  StyleSheet
-} from "react-native";
+import {View,Text, TextInput, TouchableOpacity, StyleSheet} from "react-native";
 import { useNavigation } from '@react-navigation/native';
-import SuccessMsg from './Success'
 
 const PhoneVerification = () => {
   const [otp, setOtp] = useState(["", "", "", ""]);
@@ -15,7 +8,7 @@ const PhoneVerification = () => {
   const [newOtpRequestText, setNewOtpRequestText] = useState("Request new OTP");
   const navigation = useNavigation();
   const handleNextScreen = () => {
-      navigation.navigate(SuccessMsg); 
+      navigation.navigate('Success');
   };
 
   const handleChange = (text, index) => {

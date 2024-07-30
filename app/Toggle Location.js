@@ -2,12 +2,11 @@ import React from 'react'
 import { View, Text, TouchableOpacity, StyleSheet, Image } from 'react-native';
 import * as Location from 'expo-location';
 import { useNavigation } from '@react-navigation/native';
-import Options from './Options'
 
 const EnableLocation = () => {
     const navigation = useNavigation();
     const handleOptionPress = () => {
-        navigation.navigate(Options); 
+        navigation.navigate('Options');
     };
   const enableLocation = async () => {
     let { status } = await Location.requestForegroundPermissionsAsync();

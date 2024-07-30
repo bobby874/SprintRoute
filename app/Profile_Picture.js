@@ -2,13 +2,12 @@ import React, { useState } from 'react';
 import { View, Image, StyleSheet, SafeAreaView, TouchableOpacity, Text } from 'react-native';
 import { launchImageLibrary, launchCamera } from 'react-native-image-picker';
 import { useNavigation } from '@react-navigation/native';
-import OTPVerification from './OTP Verification Prompt';
 
 const ImageUpload = () => {
   const [profileImage, setProfileImage] = useState(null);
   const navigation = useNavigation();
   const handleNextScreen = () => {
-    navigation.navigate(OTPVerification); 
+    navigation.navigate('OTPprompt');
   };
 
   const selectImage = () => {
@@ -28,12 +27,12 @@ const ImageUpload = () => {
   };
 
   return (
-    
+
     <SafeAreaView style={styles.safeArea}>
     <View style={styles.container}>
       <View style={styles.nav}>
                         <TouchableOpacity onPress={() => navigation.goBack()}>
-                            <Text style={styles.navText} >←</Text> 
+                            <Text style={styles.navText} >←</Text>
                         </TouchableOpacity>
                         <Text style={styles.header}>Add Picture</Text>
                     </View>

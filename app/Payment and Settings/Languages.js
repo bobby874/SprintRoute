@@ -3,8 +3,10 @@ import { View, Text, TouchableOpacity, Image, StyleSheet, ScrollView } from 'rea
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { Ionicons } from '@expo/vector-icons';
+import { useNavigation } from '@react-navigation/native';
 
 const Stack = createStackNavigator();
+const navigation = useNavigation();
 
 const languages = [
   { name: 'English', code: 'en', flag: 'https://flagcdn.com/w320/us.png' },
@@ -18,7 +20,7 @@ const languages = [
 ];
 
 
-const LanguageSelectionScreen = ({ navigation }) => {
+const LanguageSelectionScreen = () => {
   const [selectedLanguage, setSelectedLanguage] = useState('en');
 
   const handleLanguageSelect = (code) => {

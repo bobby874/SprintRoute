@@ -7,25 +7,14 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { useNavigation } from '@react-navigation/native';
 import CustomDrawer from './CustomDrawer';
-import Profile from '../Payment and Settings/Profile_Settings'
-import Languages from '../Payment and Settings/Languages'
-import Support from '../Payment and Settings/SupportScreen'
-import Wallet from '../Payment and Settings/Wallet'
-import InviteFriends from '../InviteScreen/InviteScreen'
-import Logout from '../Login Opts'
-import Safety from '../Payment and Settings/Safety'
-import History from '../Payment and Settings/History'
-import RideSelectionScreen from './RideSelection';
-import SearchDriver from './SearchingDriver'
-import RideInfo from './RIdeInfo'
 
 
 const navigation = useNavigation();
   const handelNextScreenPress = () => {
-      navigation.navigate(RideSelectionScreen)
+      navigation.navigate('RideSelection')
   }
 
-function MapScreen({ navigation }) {
+function MapScreen() {
   const [region, setRegion] = useState({
     latitude: 6.6746, // KNUST Latitude
     longitude: -1.5719, // KNUST Longitude
@@ -97,21 +86,21 @@ const Drawer = createDrawerNavigator();
 const Stack = createNativeStackNavigator();
 
 const DrawerNavigator = () => {
- 
+
   return (
     <Drawer.Navigator
       initialRouteName="MapScreen"
       drawerContent={(props) => <CustomDrawer {...props} />} // Use the custom drawer
     >
-      <Drawer.Screen name="Home" component={MapScreen} options={{ title: 'Home' }} />
-      <Drawer.Screen name="Profile" component={Profile} options={{ title: 'Profile' }} />
-      <Drawer.Screen name="Wallet" component={Wallet} options={{ title: 'Wallet' }} />
-      <Drawer.Screen name="History"  component={History} options={{ title: 'History' }} />
-      <Drawer.Screen name="Languages"  component={Languages} options={{ title: 'Languages' }} />
-      <Drawer.Screen name="Safety"  component={Safety} options={{ title: 'Safety' }} />
-      <Drawer.Screen name="Support and FAQ"  component={Support} options={{ title: 'Support and FAQ' }} />
-      <Drawer.Screen name="Invite Friends"  component={InviteFriends} options={{ title: 'Invite Friends' }} />
-      <Drawer.Screen name="Logout"  component={Logout} options={{ title: 'Logout' }} />
+      <Drawer.Screen name="Home" component={'Home'} options={{ title: 'Home' }} />
+      <Drawer.Screen name="Profile" component={'Profile_Settings'} options={{ title: 'Profile' }} />
+      <Drawer.Screen name="Wallet" component={'Wallet'} options={{ title: 'Wallet' }} />
+      <Drawer.Screen name="History"  component={'History'} options={{ title: 'History' }} />
+      <Drawer.Screen name="Languages"  component={'Languages'} options={{ title: 'Languages' }} />
+      <Drawer.Screen name="Safety"  component={'Safety'} options={{ title: 'Safety' }} />
+      <Drawer.Screen name="Support and FAQ"  component={'SupportScreen'} options={{ title: 'Support and FAQ' }} />
+      <Drawer.Screen name="Invite Friends"  component={'InviteScreen'} options={{ title: 'Invite Friends' }} />
+      <Drawer.Screen name="Logout"  component={'Login'} options={{ title: 'Logout' }} />
     </Drawer.Navigator>
   );
 };
@@ -121,9 +110,9 @@ const Home = () => {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen name="Drawer" component={DrawerNavigator} options={{ headerShown: false }} />
-        <Stack.Screen name="Select Ride" component={RideSelectionScreen} options={{ headerShown: false }} />
-        <Stack.Screen name="Search Driver" component={SearchDriver} options={{ headerShown: false }} />
-        <Stack.Screen name="Ride Info" component={RideInfo} options={{ headerShown: false }} />
+        <Stack.Screen name="Select Ride" component={'RideSelection'} options={{ headerShown: false }} />
+        <Stack.Screen name="Search Driver" component={'SearchingDriver'} options={{ headerShown: false }} />
+        <Stack.Screen name="Ride Info" component={'RIdeInfo'} options={{ headerShown: false }} />
       </Stack.Navigator>
     </NavigationContainer>
   );
