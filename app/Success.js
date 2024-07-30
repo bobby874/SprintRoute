@@ -1,13 +1,12 @@
 import React from 'react'
 import { View, Text, TouchableOpacity, StyleSheet, Image } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import HomeSearchScreen from './HomeScreen/SearchDestination'
 
 
 const EnableLocation = () => {
   const navigation = useNavigation();
     const handleSearchScreen = () => {
-            navigation.navigate(HomeSearchScreen); 
+            navigation.navigate('Home');
       };
 
   return (

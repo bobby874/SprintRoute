@@ -3,13 +3,12 @@ import { SafeAreaView, StyleSheet, Text, View, TextInput, TouchableOpacity } fro
 import { useNavigation } from '@react-navigation/native';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faAngleLeft } from '@fortawesome/free-solid-svg-icons';
-import Verify from './OTP Verification Prompt'
 
 const Login = () => {
     const navigation = useNavigation();
-  
+
     const handleVerifyPress = () => {
-      navigation.navigate(Verify); 
+      navigation.navigate('OTPprompt');
     };
 
   return (

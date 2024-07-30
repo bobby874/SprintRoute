@@ -1,20 +1,19 @@
 import React from 'react'
 import { useNavigation } from '@react-navigation/native';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, SafeAreaView } from 'react-native';
-import addProfilePicture from './Profile_Picture'
 
 
 const Name = () => {
     const navigation = useNavigation();
     const handleAddProfile = () => {
-            navigation.navigate(addProfilePicture); 
+            navigation.navigate('Profile_Picture');
       };
     return (
            <SafeAreaView style={styles.safeArea}>
                 <View style={styles.container}>
                     <View style={styles.nav}>
                         <TouchableOpacity onPress={() => navigation.goBack()}>
-                            <Text style={styles.navText} >←</Text> 
+                            <Text style={styles.navText} >←</Text>
                     </TouchableOpacity>
                         <Text style={styles.header}>Enter Name</Text>
                 </View>

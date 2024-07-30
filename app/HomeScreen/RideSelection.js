@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { StyleSheet, View, Text, ScrollView, TouchableOpacity } from 'react-native';
 import { Icon, Button, ListItem, Avatar } from 'react-native-elements';
-import SearchDriver from './SearchingDriver'
+import { useNavigation } from '@react-navigation/native';
 
-const RideSelectionScreen = ({ navigation }) => {
+const RideSelectionScreen = () => {
   const [selectedRide, setSelectedRide] = useState(null); // State to track selected ride
   const slideAnim = useRef(new Animated.Value(-300)).current;
   const navigation = useNavigation();
   const handelNextScreenPress = () => {
-      navigation.navigate(SearchDriver)
+      navigation.navigate('SearchingDriver')
   }
 
   const rides = [

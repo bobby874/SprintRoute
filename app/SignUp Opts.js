@@ -3,12 +3,11 @@ import { SafeAreaView, View, Text, TouchableOpacity, StyleSheet } from 'react-na
 import { useNavigation } from '@react-navigation/native';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faAngleLeft } from '@fortawesome/free-solid-svg-icons';
-import PhoneSignup from './PhoneSignUp';
 
 const SignUpOptions = () => {
     const navigation = useNavigation();
     const handleSignupPress = () => {
-        navigation.navigate(PhoneSignup); 
+        navigation.navigate('PhoneSignup');
       };
 
     return (

@@ -1,20 +1,18 @@
 import React from 'react'
 import { useNavigation } from '@react-navigation/native';
 import { StyleSheet, Text, View, TouchableOpacity, ImageBackground } from 'react-native';
-import LoginOpts from './Login Opts'
-import SignUp from './SignUp Opts'
 
 export default function App() {
   const navigation = useNavigation();
 
   const handleLoginPress = () => {
-    navigation.navigate(LoginOpts); 
+    navigation.navigate('Login');
   };
 
   const handleSignUpPress = () => {
-    navigation.navigate(SignUp);
+    navigation.navigate('SignUp');
   };
-  
+
   return (
     <View style={styles.container}>
       <ImageBackground source={require('../assets/7605147.jpg')} style={styles.backgroundImage}>

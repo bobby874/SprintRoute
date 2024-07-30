@@ -1,14 +1,13 @@
 import React, { useEffect, useRef } from 'react';
 import { View, Text, Image, StyleSheet, TouchableOpacity, Animated } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
-import Home from './SearchDestination'
-import ChatScreen from './ChatScreen';
+import { useNavigation } from '@react-navigation/native';
 
 const RideDetails = () => {
   const slideAnim = useRef(new Animated.Value(500)).current;
   const cancelRide = () => {
     // Implement ride cancellation logic here
-    navigation.goBack(Home);
+    (useNavigation()).goBack('Home');
   };
 
   useEffect(() => {
@@ -25,8 +24,20 @@ const RideDetails = () => {
 
   const navigation = useNavigation();
   const handleChatScreen = () => {
-    navigation.navigate(ChatScreen); 
+    (useNavigation()).navigate('ChatScreen');
   };
+
+  const [tripEnded, setTripEnded] = useState(false);
+
+  const endTrip = () => {
+    // Logic to end the trip, e.g., API call to mark trip as ended
+    setTripEnded(true);
+  };
+
+  // Navigate to Tips page if trip has ended
+  if (tripEnded) {
+    navigation.navigate('TipsScreen');
+  }
 
   return (
     <View style={styles.container}>
