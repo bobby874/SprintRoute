@@ -30,7 +30,7 @@ const SearchDriver = () => {
   return (
     <View style={styles.container}>
       <View style={styles.bottomContainer}>
-        <Image source={require('./assets/SearchRider.png')} style={styles.image} />
+        <Image source={require('../../assets/SearchRider.png')} style={styles.image} />
         <ActivityIndicator size="large" color="orange" style={styles.indicator} />
         <Text style={styles.messageText}>Please hold! we are searching for nearby driver for you</Text>
         <TouchableOpacity style={styles.cancelButton} onPress={handleCancelRide}>

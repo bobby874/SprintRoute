@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, Image, SafeAreaView } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import Home from '../HomeScreen/SearchDestination';
+
 
   const TipsScreen = () => {
   const navigation = useNavigation();
   const handleHomeScreen = () => {
-    navigation.navigate(Home); 
+    navigation.navigate('Home');
   };
-  
+
   const [selectedAmount, setSelectedAmount] = useState(null);
 
   const amounts = [1, 2, 5];
@@ -22,30 +22,30 @@ import Home from '../HomeScreen/SearchDestination';
       <SafeAreaView>
         <View style={styles.nav}>
         <TouchableOpacity onPress={() => navigation.goBack()}>
-        <Text style={styles.navText} >←</Text> 
+        <Text style={styles.navText} >←</Text>
         </TouchableOpacity>
         <Text style={styles.header}>Driver Tips</Text>
       </View>
       </SafeAreaView>
       <View style={styles.card}>
-        <Image 
-          source={require('../../Placeholder.png')} 
-          style={styles.profileImage} 
+        <Image
+          source={require('../../assets/Placeholder.png')}
+          style={styles.profileImage}
         />
         <Text style={styles.name}>Gregory Smith</Text>
         <Text style={styles.message}>Wanna add tip for Gregory?</Text>
         <View style={styles.amountContainer}>
           {amounts.map(amount => (
-            <TouchableOpacity 
+            <TouchableOpacity
               key={amount}
               style={[
-                styles.amountButton, 
+                styles.amountButton,
                 selectedAmount === amount && styles.selectedAmountButton
               ]}
               onPress={() => handleAmountPress(amount)}
             >
               <Text style={[
-                styles.amountText, 
+                styles.amountText,
                 selectedAmount === amount && styles.selectedAmountText
               ]}>
                 GHc{amount}
