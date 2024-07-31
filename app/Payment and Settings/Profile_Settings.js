@@ -38,7 +38,7 @@ const ProfileSettings = () => {
       <ScrollView contentContainerStyle={styles.container}>
     <View style={styles.nav}>
                         <TouchableOpacity onPress={() => navigation.goBack()}>
-                            <Text style={styles.navText} >←</Text> 
+                            <Text style={styles.navText} >←</Text>
                     </TouchableOpacity>
                         <Text style={styles.header}>Profile Settings</Text>
                 </View>
@@ -48,7 +48,7 @@ const ProfileSettings = () => {
           source={
             profilePic
               ? { uri: profilePic }
-              : require('./assets/Placeholder.png') // Provide a placeholder image
+              : require('../../assets/Placeholder.png') // Provide a placeholder image
           }
           style={styles.profilePic}
         />
@@ -181,7 +181,7 @@ nav: {
         flexDirection: 'row',
         alignItems: 'center',
         marginRight: 150
-        
+
     },
     header: {
         fontSize:25,
@@ -191,7 +191,7 @@ nav: {
     fontSize: 25,
     fontWeight: 600,
     marginRight: 10,
-    
+
   },
   inputId: {
     flexDirection: 'row',

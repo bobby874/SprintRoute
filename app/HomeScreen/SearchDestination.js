@@ -44,7 +44,7 @@ function MapScreen() {
           <Marker
             key={car.id}
             coordinate={{ latitude: car.latitude, longitude: car.longitude }}
-            image={require('../../assets/car.jpg')} />
+            image={require('../../assets/car.png')} />
         ))}
       </MapView>
       <View style={styles.searchContainer}>
