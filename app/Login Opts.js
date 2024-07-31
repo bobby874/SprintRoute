@@ -17,7 +17,7 @@ const Login = () => {
           <TouchableOpacity onPress={() => navigation.goBack()} style={styles.backArrow}>
             <FontAwesomeIcon icon={faAngleLeft} size={24} color="#000" />
           </TouchableOpacity>
-      </ SafeAreaView>
+      </SafeAreaView>
       <Text style={styles.header}>Log into your account</Text>
       <View style={styles.inputGroup}>
         <TextInput
@@ -31,6 +31,7 @@ const Login = () => {
           keyboardType="phone-pad"
           required
         />
+
       </View>
       <TouchableOpacity style={[styles.button, styles.continueButton]} onPress={handleVerifyPress}>
         <Text style={styles.buttonText}>Continue</Text>

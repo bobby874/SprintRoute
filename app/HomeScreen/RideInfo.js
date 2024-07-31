@@ -3,7 +3,7 @@ import { View, Text, Image, StyleSheet, TouchableOpacity, Animated } from 'react
 import Icon from 'react-native-vector-icons/Ionicons';
 import { useNavigation } from '@react-navigation/native';
 
-const RideDetails = () => {
+const RideInfo = () => {
   const slideAnim = useRef(new Animated.Value(500)).current;
   const cancelRide = () => {
     // Implement ride cancellation logic here
@@ -232,4 +232,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default RideDetails;
+export default RideInfo;

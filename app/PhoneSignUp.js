@@ -17,7 +17,7 @@ const PhoneSignup = () => {
             <TouchableOpacity onPress={() => navigation.goBack()} style={styles.backArrow}>
                 <FontAwesomeIcon icon={faAngleLeft} size={24} color="#000" />
             </TouchableOpacity>
-        </ SafeAreaView>
+        </SafeAreaView>
         <Text style={styles.title}>Enter Phone Number</Text>
         <View style={styles.inputGroup}>
             <TextInput style={[styles.input, styles.ccode]} placeholder="+" keyboardType="phone-pad" />

@@ -16,7 +16,7 @@ const SignUpOptions = () => {
                 <TouchableOpacity onPress={() => navigation.goBack()} style={styles.backArrow}>
                     <FontAwesomeIcon icon={faAngleLeft} size={24} color="#000" />
                 </TouchableOpacity>
-            </ SafeAreaView>
+            </SafeAreaView>
             <Text style={styles.title}>Create an account</Text>
             <TouchableOpacity style={[styles.button, styles.continueButton]} onPress={handleSignupPress}>
                 <Text style={styles.continueButtonText}>Continue with Phone</Text>

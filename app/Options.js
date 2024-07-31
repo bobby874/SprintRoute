@@ -2,7 +2,7 @@ import React from 'react'
 import { useNavigation } from '@react-navigation/native';
 import { StyleSheet, Text, View, TouchableOpacity, ImageBackground } from 'react-native';
 
-export default function App() {
+export default function Options() {
   const navigation = useNavigation();
 
   const handleLoginPress = () => {
