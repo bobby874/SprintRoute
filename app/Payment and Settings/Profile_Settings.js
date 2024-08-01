@@ -62,7 +62,7 @@ const ProfileSettings = () => {
       <Text style={styles.inputId}>FIrst Name:</Text>
       <TextInput
         style={styles.input}
-        placeholder="First Name"
+        placeholder="Michael"
         value={firstName}
         onChangeText={setFirstName}
       />
@@ -70,7 +70,7 @@ const ProfileSettings = () => {
       <Text style={styles.inputId}>Last Name:</Text>
       <TextInput
         style={styles.input}
-        placeholder="Last Name"
+        placeholder=" Anang"
         value={lastName}
         placeholderTextColor="Black"
         onChangeText={setLastName}
@@ -79,7 +79,7 @@ const ProfileSettings = () => {
       <Text style={styles.inputId}>Mobile Number:</Text>
       <TextInput
         style={styles.input}
-        placeholder="Mobile Number"
+        placeholder="+233201526751"
         value={mobileNumber}
         onChangeText={setMobileNumber}
         keyboardType="phone-pad"
@@ -88,7 +88,7 @@ const ProfileSettings = () => {
       <Text style={styles.inputId}>Email Address:</Text>
       <TextInput
         style={styles.input}
-        placeholder="Email Address"
+        placeholder="michaelanang1905@gmail.com"
         value={email}
         onChangeText={setEmail}
         keyboardType="email-address"

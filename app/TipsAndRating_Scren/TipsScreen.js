@@ -32,8 +32,8 @@ import { useNavigation } from '@react-navigation/native';
           source={require('../../assets/Placeholder.png')}
           style={styles.profileImage}
         />
-        <Text style={styles.name}>Gregory Smith</Text>
-        <Text style={styles.message}>Wanna add tip for Gregory?</Text>
+        <Text style={styles.name}>Sallo Samuel</Text>
+        <Text style={styles.message}>Wanna add tip for Samuel?</Text>
         <View style={styles.amountContainer}>
           {amounts.map(amount => (
             <TouchableOpacity
