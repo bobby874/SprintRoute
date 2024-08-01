@@ -10,8 +10,8 @@ const CustomDrawer = (props) => {
           image={require('../../assets/Placeholder.png')}
           style={styles.profilePicture}
         />
-        <Text style={styles.username}>username</Text>
-        <Text style={styles.email}>username@google.com</Text>
+        <Text style={styles.username}>Michael Anang</Text>
+        <Text style={styles.email}>mihael1990@google.com</Text>
       </View>
       <DrawerItemList {...props} />
     </DrawerContentScrollView>

@@ -56,8 +56,8 @@ const RideInfo = () => {
             style={styles.driverImage}
           />
           <View>
-            <Text style={styles.driverName}>Driver Name</Text>
-            <Text style={styles.carDetails}>Car Brand - Registration No</Text>
+            <Text style={styles.driverName}>Sallo Samuel</Text>
+            <Text style={styles.carDetails}>Toyota,vits - ER-8684</Text>
           </View>
           <View style={styles.contactIcons}>
             <TouchableOpacity style={styles.iconContainer}>
@@ -73,14 +73,14 @@ const RideInfo = () => {
             <View style={styles.dotContainer}>
               <View style={[styles.dot, { backgroundColor: 'orange' }]} />
             </View>
-            <Text style={styles.locationText}>Pickup Location</Text>
+            <Text style={styles.locationText}>KUNST, Kumasi</Text>
           </View>
           <View style={styles.verticalLine} />
           <View style={styles.locationRow}>
             <View style={styles.dotContainer}>
               <View style={[styles.dot, { backgroundColor: 'green' }]} />
             </View>
-            <Text style={styles.locationText}>Destination Location</Text>
+              <Text style={styles.locationText}>Kumasi city mall , Kumasi</Text>
             <TouchableOpacity style={styles.changeButton}>
               <Text style={styles.changeText}>Change</Text>
             </TouchableOpacity>

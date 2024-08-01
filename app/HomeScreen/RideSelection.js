@@ -15,7 +15,7 @@ const RideSelectionScreen = () => {
     {
       id: 1,
       name: 'Sprint',
-      price: 'Price',
+      price: 'GHc 20',
       image: require('../../assets/car.png'),
     },
     {
@@ -27,7 +27,7 @@ const RideSelectionScreen = () => {
     {
       id: 3,
       name: 'Bike',
-      price: 'Price',
+      price: 'GHc 10',
       image: require('../../assets/bike.png'),
     },
   ];

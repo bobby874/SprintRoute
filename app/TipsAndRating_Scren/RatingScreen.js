@@ -56,8 +56,8 @@ const RatingScreen = () => {
         source={require('../../assets/Placeholder.png')}
         style={styles.profileImage}
       />
-      <Text style={styles.userName}>Username</Text>
-      <Text style={styles.userId}>userId</Text>
+      <Text style={styles.userName}>Michael Anang</Text>
+      <Text style={styles.userId}>20901727</Text>
       <Text style={styles.title}>How is your trip?</Text>
       <Text style={styles.subtitle}>Your feedback will help improve driving experience</Text>
       <StarRating

@@ -37,7 +37,7 @@ const ChatScreen = () => {
         <View style={styles.headerLeft}>
           <Image source={require('../../assets/Placeholder.png')} style={styles.profileImage} />
           <View style={styles.headerTextContainer}>
-            <Text style={styles.profileName}>Driver ID</Text>
+            <Text style={styles.profileName}>Sallo Samuel</Text>
             <Text style={styles.status}>Active now</Text>
           </View>
         </View>

@@ -53,7 +53,6 @@ const DrawerContent = (props) => {
 const StackNavigator = () => {
   return (
     <Stack.Navigator initialRouteName="Options">
-      <Stack.Screen name="Home" component={Home} options={{headerShown: false}}/>
       <Stack.Screen name="Options" component={Options} options={{ headerShown: false }} />
       <Stack.Screen name="Location" component={Location} options={{ headerShown: false }} />
       <Stack.Screen name="Login" component={Login} options={{ headerShown: false }} />
@@ -64,6 +63,7 @@ const StackNavigator = () => {
       <Stack.Screen name="PhoneSignup" component={PhoneSignup} options={{ headerShown: false }} />
       <Stack.Screen name="Profile_Picture" component={Profile_Picture} options={{ headerShown: false }} />
       <Stack.Screen name="Success" component={Success} options={{ headerShown: false }} />
+      <Stack.Screen name="Home" component={Home} options={{headerShown: false}}/>
       <Stack.Screen name="CustomDrawer" component={CustomDrawer} options={{ headerShown: false }} />
       <Stack.Screen name="RideInfo" component={RideInfo} options={{ headerShown: false }} />
       <Stack.Screen name="RideSelection" component={RideSelection} options={{ headerShown: false }} />

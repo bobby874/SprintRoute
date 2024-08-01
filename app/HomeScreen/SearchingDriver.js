@@ -25,7 +25,12 @@ const SearchDriver = () => {
   const handleCancelRide = () => {
     Alert.alert('Ride Cancelled', 'Your ride has been cancelled.');
     // Add any other logic for cancelling the ride here
+    navigation.navigate('Home')
   };
+
+  const handleContinuePress=()=>{
+      navigation.navigate('RIdeInfo')
+  }
 
   return (
     <View style={styles.container}>
@@ -33,6 +38,9 @@ const SearchDriver = () => {
         <Image source={require('../../assets/SearchRider.png')} style={styles.image} />
         <ActivityIndicator size="large" color="orange" style={styles.indicator} />
         <Text style={styles.messageText}>Please hold! we are searching for nearby driver for you</Text>
+        <TouchableOpacity onPress={handleContinuePress} styles={style.continue}>
+          <Text>Continue</Text>
+        </TouchableOpacity>
         <TouchableOpacity style={styles.cancelButton} onPress={handleCancelRide}>
           <Text style={styles.cancelButtonText}>Cancel Ride</Text>
         </TouchableOpacity>
@@ -66,6 +74,10 @@ const styles = StyleSheet.create({
     height: 100,
     marginVertical: 20,
   },
+continue:{
+  color: 'orange',
+  marginVertical: 10
+},
   indicator: {
     marginVertical: 10,
   },
